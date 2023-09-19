@@ -1,0 +1,12 @@
+-- CreateTable
+CREATE TABLE `URL` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `urlId` VARCHAR(191) NOT NULL,
+    `longUrl` TINYTEXT NOT NULL,
+    `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `visits` INTEGER NOT NULL DEFAULT 0,
+    `enabled` BOOLEAN NOT NULL DEFAULT true,
+
+    UNIQUE INDEX `URL_urlId_key`(`urlId`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
